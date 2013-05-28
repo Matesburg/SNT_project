@@ -52,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Llib -L../SNT_pl2cpp/dist/Debug/MinGW-Windows -lSNT_pl2cpp lib/simlib.dll /C/swipl/lib/libswipl.dll
+LDLIBSOPTIONS=-Llib -L../SNT_pl2cpp/dist/Debug/MinGW-Windows -lSNT_pl2cpp lib/simlib.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -61,8 +61,6 @@ LDLIBSOPTIONS=-Llib -L../SNT_pl2cpp/dist/Debug/MinGW-Windows -lSNT_pl2cpp lib/si
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: ../SNT_pl2cpp/dist/Debug/MinGW-Windows/libSNT_pl2cpp.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: lib/simlib.dll
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: /C/swipl/lib/libswipl.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}

@@ -59,7 +59,6 @@
               </makeArtifact>
             </linkerLibProjectItem>
             <linkerLibFileItem>lib/simlib.dll</linkerLibFileItem>
-            <linkerLibFileItem>C:/swipl/lib/libswipl.dll</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

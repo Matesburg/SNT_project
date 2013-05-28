@@ -38,6 +38,17 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>C:/swipl/include</pElem>
+          </incDir>
+          <commandLine>-static-libgcc -static-libstdc++</commandLine>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>C:/swipl/lib/libswipl.dll</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="libexport.h" ex="false" tool="3" flavor2="0">
       </item>

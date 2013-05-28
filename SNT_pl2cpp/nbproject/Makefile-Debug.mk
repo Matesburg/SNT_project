@@ -42,8 +42,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-static-libgcc -static-libstdc++
+CXXFLAGS=-static-libgcc -static-libstdc++
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -52,11 +52,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=/C/swipl/lib/libswipl.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}: /C/swipl/lib/libswipl.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -65,7 +67,7 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}: ${OBJE
 ${OBJECTDIR}/pl2cpp.o: pl2cpp.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g  -MMD -MP -MF $@.d -o ${OBJECTDIR}/pl2cpp.o pl2cpp.cpp
+	$(COMPILE.cc) -g -I/C/swipl/include -static-libgcc -static-libstdc++  -MMD -MP -MF $@.d -o ${OBJECTDIR}/pl2cpp.o pl2cpp.cpp
 
 # Subprojects
 .build-subprojects:
