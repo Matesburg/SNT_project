@@ -37,28 +37,32 @@
       </toolsSet>
       <compileType>
         <ccTool>
+          <architecture>1</architecture>
           <incDir>
             <pElem>C:/swipl/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app</output>
           <linkerAddLib>
             <pElem>lib</pElem>
+            <pElem>../SNT_pl2cpp/dist/Debug/MinGW-Windows</pElem>
           </linkerAddLib>
           <linkerLibItems>
+            <linkerLibFileItem>lib/simlib.dll</linkerLibFileItem>
             <linkerLibProjectItem>
-              <makeArtifact PL="../SNT_pl2cpp"
+              <makeArtifact PL="E:/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp"
                             CT="2"
                             CN="Debug"
                             AC="true"
                             BL="true"
-                            WD="../SNT_pl2cpp"
+                            WD="E:/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp"
                             BC="${MAKE}  -f Makefile CONF=Debug"
                             CC="${MAKE}  -f Makefile CONF=Debug clean"
-                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}">
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT}">
               </makeArtifact>
             </linkerLibProjectItem>
-            <linkerLibFileItem>lib/simlib.dll</linkerLibFileItem>
+            <linkerLibFileItem>C:/swipl/lib/libswipl.dll</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

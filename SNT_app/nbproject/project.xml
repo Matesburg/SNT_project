@@ -9,7 +9,7 @@
             <header-extensions/>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects>
-                <make-dep-project>../SNT_pl2cpp</make-dep-project>
+                <make-dep-project>E:/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp</make-dep-project>
             </make-dep-projects>
             <sourceRootList/>
             <confList>

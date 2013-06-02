@@ -42,9 +42,9 @@
           <incDir>
             <pElem>C:/swipl/include</pElem>
           </incDir>
-          <commandLine>-static-libgcc -static-libstdc++</commandLine>
         </ccTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT}</output>
           <linkerLibItems>
             <linkerLibFileItem>C:/swipl/lib/libswipl.dll</linkerLibFileItem>
           </linkerLibItems>

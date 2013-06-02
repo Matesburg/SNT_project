@@ -42,8 +42,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-m32
+CXXFLAGS=-m32
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -52,15 +52,17 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Llib -L../SNT_pl2cpp/dist/Debug/MinGW-Windows -lSNT_pl2cpp lib/simlib.dll
+LDLIBSOPTIONS=-Llib -L../SNT_pl2cpp/dist/Debug/MinGW-Windows lib/simlib.dll -LE\:/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp/dist/Debug/MinGW-Windows -lpl2cpp /C/swipl/lib/libswipl.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: ../SNT_pl2cpp/dist/Debug/MinGW-Windows/libSNT_pl2cpp.dll
-
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: lib/simlib.dll
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: /E/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp/dist/Debug/MinGW-Windows/libpl2cpp.dll
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: /C/swipl/lib/libswipl.dll
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/snt_app.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -73,7 +75,7 @@ ${OBJECTDIR}/main.o: main.cpp
 
 # Subprojects
 .build-subprojects:
-	cd ../SNT_pl2cpp && ${MAKE}  -f Makefile CONF=Debug
+	cd E\:/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp && ${MAKE}  -f Makefile CONF=Debug
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
@@ -82,7 +84,7 @@ ${OBJECTDIR}/main.o: main.cpp
 
 # Subprojects
 .clean-subprojects:
-	cd ../SNT_pl2cpp && ${MAKE}  -f Makefile CONF=Debug clean
+	cd E\:/VUT/10.sem/SNT/projekt/SNT_project/SNT_pl2cpp && ${MAKE}  -f Makefile CONF=Debug clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

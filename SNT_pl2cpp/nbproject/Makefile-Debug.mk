@@ -42,8 +42,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-static-libgcc -static-libstdc++
-CXXFLAGS=-static-libgcc -static-libstdc++
+CCFLAGS=
+CXXFLAGS=
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -56,18 +56,18 @@ LDLIBSOPTIONS=/C/swipl/lib/libswipl.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT}
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}: /C/swipl/lib/libswipl.dll
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT}: /C/swipl/lib/libswipl.dll
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT}: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -shared
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT} ${OBJECTFILES} ${LDLIBSOPTIONS} -shared
 
 ${OBJECTDIR}/pl2cpp.o: pl2cpp.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/C/swipl/include -static-libgcc -static-libstdc++  -MMD -MP -MF $@.d -o ${OBJECTDIR}/pl2cpp.o pl2cpp.cpp
+	$(COMPILE.cc) -g -I/C/swipl/include  -MMD -MP -MF $@.d -o ${OBJECTDIR}/pl2cpp.o pl2cpp.cpp
 
 # Subprojects
 .build-subprojects:
@@ -75,7 +75,7 @@ ${OBJECTDIR}/pl2cpp.o: pl2cpp.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libSNT_pl2cpp.${CND_DLIB_EXT}
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libpl2cpp.${CND_DLIB_EXT}
 
 # Subprojects
 .clean-subprojects:
